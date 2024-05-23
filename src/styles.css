@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .amplify-button--primary {
-  background: rgb(79 70 229 / 1)
+  background: rgb(79 70 229 / 1) !important;
+}
+
+.amplify-button--primary:hover {
+  opacity: 0.9 !important;
+}
+
+.amplify-tabs__item:hover{
+  color: rgb(79 70 229 / 1) !important;
+  opacity: 0.8;
+}
+
+.amplify-tabs__item--active{
+  color: rgb(79 70 229 / 1) !important;
+  border-color:rgb(79 70 229 / 1) !important;
+
 }
