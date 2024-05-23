@@ -3,5 +3,12 @@
 @tailwind utilities;
 
 .amplify-button--primary {
-  background: rgb(79 70 229 / 1)
+  background-color:  rgb(79 70 229 / 1) !important
+}
+.amplify-button--small{
+    color: rgb(79 70 229 / 1) !important;
+    cursor: pointer !important;
+}
+.amplify-button--small:hover{
+    background-color:  transparent !important;
 }
