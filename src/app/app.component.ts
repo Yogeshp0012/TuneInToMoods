@@ -11,12 +11,13 @@ Amplify.configure(outputs);
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [RouterModule, AmplifyAuthenticatorModule],
+  imports: [RouterModule,AmplifyAuthenticatorModule],
 })
 export class AppComponent {
-  title = 'amplify-angular-template';
-    
-  constructor(public authenticator: AuthenticatorService) {
-    Amplify.configure(outputs);
-  }
+  title = 'TuneInToMoods';
+
+
+constructor(public authenticator: AuthenticatorService) {
+  Amplify.configure(outputs);
+}
 }
