@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,4 +22,17 @@
   color: rgb(79 70 229 / 1) !important;
   border-color:rgb(79 70 229 / 1) !important;
 
+}
+.amplify-button--small{
+    color: rgb(79 70 229 / 1) !important;
+    cursor: pointer !important;
+}
+.amplify-button--small:hover{
+    background-color:  transparent !important;
+}
+
+.concert-one-regular {
+  font-family: "Concert One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

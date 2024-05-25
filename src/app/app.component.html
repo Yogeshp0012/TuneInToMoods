@@ -1,12 +1,14 @@
-
-<div class="h-screen flex items-center justify-center bg-gray-800">
-    <amplify-authenticator>
+<div *ngIf="!user" class="flex justify-center items-center h-screen">
+    <amplify-authenticator [signUpAttributes]="['preferred_username']">
         <ng-template
           amplifySlot="authenticated"
           let-user="user"
           let-signOut="signOut"
-        >
-          <button (click)="signOut()">Sign Out</button>
+          let-isAuthenticated="isAuthenticated"
+        ><div class="bg-white">
+          <app-navbar [user]="user" [signOut]="signOut" />
+          <router-outlet></router-outlet>
+        </div>
         </ng-template>
       </amplify-authenticator>
 </div>
