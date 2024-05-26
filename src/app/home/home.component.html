@@ -1,57 +1,123 @@
-<div *ngIf="loading" class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
+<div
+  *ngIf="loading"
+  class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible"
+>
   <div class="flex gap-8">
-    <svg class="text-gray-300 w-12 h-12 animate-spin" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"
-      width="24" height="24">
+    <svg
+      class="text-gray-300 w-12 h-12 animate-spin"
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+    >
       <path
         d="M32 3C35.8083 3 39.5794 3.75011 43.0978 5.20749C46.6163 6.66488 49.8132 8.80101 52.5061 11.4939C55.199 14.1868 57.3351 17.3837 58.7925 20.9022C60.2499 24.4206 61 28.1917 61 32C61 35.8083 60.2499 39.5794 58.7925 43.0978C57.3351 46.6163 55.199 49.8132 52.5061 52.5061C49.8132 55.199 46.6163 57.3351 43.0978 58.7925C39.5794 60.2499 35.8083 61 32 61C28.1917 61 24.4206 60.2499 20.9022 58.7925C17.3837 57.3351 14.1868 55.199 11.4939 52.5061C8.801 49.8132 6.66487 46.6163 5.20749 43.0978C3.7501 39.5794 3 35.8083 3 32C3 28.1917 3.75011 24.4206 5.2075 20.9022C6.66489 17.3837 8.80101 14.1868 11.4939 11.4939C14.1868 8.80099 17.3838 6.66487 20.9022 5.20749C24.4206 3.7501 28.1917 3 32 3L32 3Z"
-        stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path>
+        stroke="currentColor"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
       <path
         d="M32 3C36.5778 3 41.0906 4.08374 45.1692 6.16256C49.2477 8.24138 52.7762 11.2562 55.466 14.9605C58.1558 18.6647 59.9304 22.9531 60.6448 27.4748C61.3591 31.9965 60.9928 36.6232 59.5759 40.9762"
-        stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-        class="text-indigo-600"></path>
+        stroke="currentColor"
+        stroke-width="5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="text-indigo-600"
+      ></path>
     </svg>
   </div>
 </div>
 
-  <div *ngIf="!loading" class="relative isolate">
-    <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
-      <defs>
-        <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
-          <path d="M100 200V.5M.5 .5H200" fill="none" />
-        </pattern>
-      </defs>
-      <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
-        <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
-      </svg>
-      <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+<div *ngIf="!loading" class="relative isolate pt-80 mt-40 lg:pt-14 lg:mt-0">
+  <svg
+    class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+    aria-hidden="true"
+  >
+    <defs>
+      <pattern
+        id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+        width="200"
+        height="200"
+        x="50%"
+        y="-1"
+        patternUnits="userSpaceOnUse"
+      >
+        <path d="M100 200V.5M.5 .5H200" fill="none" />
+      </pattern>
+    </defs>
+    <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+      <path
+        d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+        stroke-width="0"
+      />
     </svg>
-    <div class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-      <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-        <div class="flex">
-          <div class="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
-            <span class="font-semibold text-indigo-600">Mood-lifting tunes ahead, {{username}}</span>
-          </div>
-        </div>
-        <h1 class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Dive into Mood-based Music</h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600">Get ready to tune into your moods with TuneIntoMoods! Our innovative music application uses advanced technology to provide tailored song and playlist recommendations based on your moods and preferences. Let the music play and your emotions soar!</p>
-        <div class="mt-10 flex items-center gap-x-6">
-          <button href="#" class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Tune In and Emote</button>
+    <rect
+      width="100%"
+      height="100%"
+      stroke-width="0"
+      fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
+    />
+  </svg>
+  <div
+    class="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex mt-40 lg:items-center lg:gap-x-10 lg:px-8 lg:py-40"
+  >
+    <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
+      <div class="flex">
+        <div
+          class="relative flex items-center gap-x-4 rounded-full px-4 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+        >
+          <span class="font-semibold text-indigo-600"
+            >Mood-lifting tunes ahead, {{ username }}</span
+          >
         </div>
       </div>
-      <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
-        <svg viewBox="0 0 366 729" role="img" class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
-          <title>TuneIntoMoods</title>
-          <defs>
-            <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
-              <rect width="316" height="684" rx="36" />
-            </clipPath>
-          </defs>
-          <path fill="#4B5563" d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z" />
-          <path fill="#343E4E" d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z" />
-          <foreignObject width="316" height="684" transform="translate(24 24)" clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)">
-            <img src="https://www.soundguys.com/wp-content/uploads/2019/08/IMG_2878.jpg" alt="" />
-          </foreignObject>
-        </svg>
+      <h1 class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+        Dive into Mood-based Music
+      </h1>
+      <p class="mt-6 text-lg leading-8 text-gray-600">
+        Get ready to tune into your moods with TuneIntoMoods! Our innovative music application uses
+        advanced technology to provide tailored song and playlist recommendations based on your
+        moods and preferences. Let the music play and your emotions soar!
+      </p>
+      <div class="mt-10 flex items-center gap-x-6">
+        <button
+          routerLink="/mood-analyze"
+          class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          Tune In and Emote
+        </button>
       </div>
     </div>
+    <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+      <svg viewBox="0 0 366 729" role="img" class="mx-auto w-[22.875rem] max-w-full drop-shadow-xl">
+        <title>TuneIntoMoods</title>
+        <defs>
+          <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
+            <rect width="316" height="684" rx="36" />
+          </clipPath>
+        </defs>
+        <path
+          fill="#4B5563"
+          d="M363.315 64.213C363.315 22.99 341.312 1 300.092 1H66.751C25.53 1 3.528 22.99 3.528 64.213v44.68l-.857.143A2 2 0 0 0 1 111.009v24.611a2 2 0 0 0 1.671 1.973l.95.158a2.26 2.26 0 0 1-.093.236v26.173c.212.1.398.296.541.643l-1.398.233A2 2 0 0 0 1 167.009v47.611a2 2 0 0 0 1.671 1.973l1.368.228c-.139.319-.314.533-.511.653v16.637c.221.104.414.313.56.689l-1.417.236A2 2 0 0 0 1 237.009v47.611a2 2 0 0 0 1.671 1.973l1.347.225c-.135.294-.302.493-.49.607v377.681c0 41.213 22 63.208 63.223 63.208h95.074c.947-.504 2.717-.843 4.745-.843l.141.001h.194l.086-.001 33.704.005c1.849.043 3.442.37 4.323.838h95.074c41.222 0 63.223-21.999 63.223-63.212v-394.63c-.259-.275-.48-.796-.63-1.47l-.011-.133 1.655-.276A2 2 0 0 0 366 266.62v-77.611a2 2 0 0 0-1.671-1.973l-1.712-.285c.148-.839.396-1.491.698-1.811V64.213Z"
+        />
+        <path
+          fill="#343E4E"
+          d="M16 59c0-23.748 19.252-43 43-43h246c23.748 0 43 19.252 43 43v615c0 23.196-18.804 42-42 42H58c-23.196 0-42-18.804-42-42V59Z"
+        />
+        <foreignObject
+          width="316"
+          height="684"
+          transform="translate(24 24)"
+          clip-path="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
+        >
+          <img
+            src="https://wallpapers.com/images/hd/spotify-playlist-pictures-r7kcmdctj1i00sdv.jpg"
+            alt=""
+          />
+        </foreignObject>
+      </svg>
+    </div>
   </div>
+</div>
